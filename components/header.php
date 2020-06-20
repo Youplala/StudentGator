@@ -7,9 +7,7 @@
       <a href="#" data-target="mobile-demo" class="sidenav-trigger" ><i class="material-icons black-text">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.php" class="black-text">Home</a></li>
-        <li><a href="" class="black-text">News</a></li>
-        <li><a href="" class="black-text">Contact</a></li>
-        <li><a href="" class="black-text">About us</a></li>
+        <li><a href="SGallprogs.php" class="black-text">Programs</a></li>
         <?php
         if( isset($_SESSION['username']) && !empty($_SESSION['username']) )
         {
@@ -63,9 +61,8 @@
     <?php }else{ ?>
       <li><a class="waves-effect waves-light btn-large" href="login.php">Login</a></li>
     <?php } ?>
-    <li><a href="">Home</a></li>
-    <li><a href="">News</a></li>
-    <li><a href="">Contact</a></li>
+    <li><a href="index.php" class="black-text">Home</a></li>
+    <li><a href="SGallprogs.php" class="black-text">Programs</a></li>
 
 
   </ul>

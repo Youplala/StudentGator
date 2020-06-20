@@ -133,8 +133,6 @@
           <div class="white">
             <div class="row container">
               <h2 class="header">Free and easy</h2>
-              <p class="grey-text text-darken-3 lighten-3">You can easily access the stuff, everything is there and you can blabla beacuse yes of course. Also it is very good because we like it very much</p>
-              <p class="grey-text text-darken-3 lighten-3">re and you can blabla beacuse yes of course. Also it is very good because we like it very much</p>
               <div class="row center">
 
                 <div class="col s12 m5 l4">
@@ -143,11 +141,11 @@
                 </div>
                 <div class="col s12 m5 l4">
                   <i class="product_icon large teal-text text-darken-3 material-icons">chat_bubble</i>
-                  <p class="">Absolutely no charge for students, you only have to apply, upload your documents and StudentGator will do the rest</p>
+                  <p class="">You can contact students at any moment to answer your questions</p>
                 </div>
                 <div class="col s12 m5 l4 container">
                   <i class="large product_icon teal-text text-darken-3 material-icons">flight</i>
-                  <p class="">Absolutely no charge for students, you only have to apply, upload your documents and StudentGator will do the rest</p>
+                  <p class="">Specially made for foreign students that want to study in France.</p>
                 </div>
 
               </div>

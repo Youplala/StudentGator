@@ -138,29 +138,29 @@ $resultschools=$mysqli->query("SELECT * FROM schools ORDER BY name ASC");
 
       <div class="col l8 m10 s12">
         <div class="programs">
-          <ul class="collection">
+          <div class="collection">
             <?php   while ($rows=$resultprograms->fetch_assoc()) {
               $progname=$rows['Name'];
               $tut=$rows['fee'];
               $school=$rows['school'];
               $city=$rows['city'];
 
-            echo " <li class='collection-item avatar'>";
+            echo " <a href='programnv.php' class='collection-item avatar'>";
 
               echo " <span class='title black-text text-darken-4'>";
               echo "$progname </span>";
                  echo "<div class='row'>";
                 echo   "<div class='col l4'>";
-                  echo    "<p>$school</p>";
+                  echo    "<p class='black-text text-darken-4'>$school</p>";
                   echo    "<p>$city</p>";
                    echo "</div>";
                 echo   " <div class='col l3'>";
-                  echo    "<p>TUITION FEE</p>";
+                  echo    "<p class='black-text text-darken-4'>TUITION FEE</p>";
                   echo   " <p>$tut</p>";
                   echo "</div>";
                 echo " </div>";
                echo "<a href='#!' class='secondary-content'><i class='material-icons'></i></a>";
-             echo "</li>";
+             echo "</a>";
                } ?>
 
 

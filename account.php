@@ -33,7 +33,7 @@
         <div class="col s12 m12 l7">
             <div class="row card">
               <div class="info_container">
-                <img class="profile_picture modal-trigger" href="#modal1" src=<?php echo $pp_url["profile_picture_url"]; ?> alt="Photo de profil" title="Change your profile picture" >
+                <img class="profile_picture modal-trigger tooltipped" data-position="left" data-tooltip="Change your profile picture" href="#modal1" src=<?php echo $pp_url["profile_picture_url"]; ?> alt="Photo de profil" title="Change your profile picture" >
                 <div class="infos">
                   <h5><?php echo $first_surname; ?></h5>
                   <p><?php echo $biography; ?></p>
@@ -43,6 +43,7 @@
                 <div class="modal-content">
                   <h4>Upload profile picture</h4>
                   <p>Take a nice picture to show your professionalism. Formats accepted: jpg, png, jpeg</p>
+
                   <form action="account.php" method="post" enctype="multipart/form-data">
                     <div class="file-field input-field">
                       <div class="btn">
@@ -53,6 +54,7 @@
                         <input class="file-path validate" type="text" placeholder="Profile picture">
                       </div>
                     </div>
+                    <p>When done, reload the page to see your new picture</p>
                     <div class="modal-footer">
                       <input type="submit" name="submit" value="Done" class="modal-close waves-effect waves-green btn-flat">
                     </div>
@@ -158,6 +160,7 @@
       <script>
       $(document).ready(function(){
       $('.modal').modal();
+      $('.tooltipped').tooltip();
     });
       var el = document.querySelector('.tabs');
       var instance = M.Tabs.init(el, {});
