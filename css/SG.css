@@ -1,0 +1,305 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+  
+}
+body
+{
+    overflow-x: hidden;
+}
+
+#firstupper
+{
+    width: 100%;
+    height: 100%;
+}
+
+.navbar
+{
+	background-color:white;
+  height: 100px;
+    width: 100%;
+	border: none;
+}
+.navbar-inverse .navbar-nav > li > a
+{
+	color: black;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+    padding: 25px;
+    font-weight: 400;
+    line-height: 20px;
+    
+}
+
+.mm
+{
+    margin-top: 25px;
+    margin-left: 100px;
+}
+
+.upbutton
+{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgb(196, 149, 67);
+    box-shadow: 4px 4px rgb(235, 235, 235);
+    border-radius: 60px 60px 60px 60px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.nvheader
+{
+    margin-left: 110px;
+    position: relative;
+    bottom: 20px;
+}
+
+.mm 
+{
+    margin-right: 150px;
+}
+
+.mm .ll 
+{
+   margin-left: 90px;
+    margin-top: 10px;
+}
+
+
+.navbar-inverse .navbar-nav  > li > a:hover
+{
+  text-decoration: underline;
+  text-decoration-color: rgb(97, 206, 112);
+  color: black;
+  
+}
+.secd
+{
+    margin-top: 80px;
+}
+.imgg
+{
+   margin-left: 150px; 
+}
+.s
+{
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 35px;
+    color: #000000;
+}
+.fd
+{
+    margin-top: 90px;
+    margin-left: 80px;
+    
+    
+}
+
+.ss
+{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #000000;
+}
+.sss
+{
+    
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: gray;
+    
+}
+
+.fdd
+{
+    margin-left: 80px; 
+    margin-top: 20px;
+}
+.leftbutton
+{
+
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgb(11, 40, 43);
+    box-shadow: 4px 4px rgb(235, 235, 235);
+    border-radius: 60px 60px 60px 60px;
+    font-size: 20px;
+    line-height: 20px;
+}
+.fr
+{
+    margin-left: 10px;
+}
+.fddd
+{
+    margin-left: 80px;
+    margin-top: 20px;
+   
+}
+#secsec
+{
+    width: 100%;
+    height: 100%;
+  
+    
+}
+.p2
+{
+    font-size: 35px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 35px;
+    font-style: normal;
+    margin-top: 350px;
+    text-align: center;
+    
+    
+}
+.p3
+{
+    font-size: 16px;
+    font-weight: 400;
+    color: #0b282b;
+    line-height: 16px;
+    font-style: normal;
+    margin-top: 100px;
+    text-align: center;
+}
+.l2
+{
+    width: 300px;
+    height: 45px;
+    padding: 10px;
+}
+.l3
+{
+    padding: 10px;
+    display: inline-block
+    
+}
+.ul
+{
+   margin-top: 30px;
+    margin-right: 40px;
+    text-align: center;
+}
+.downbutt
+{
+     padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgb(11, 40, 43);
+    box-shadow: 4px 4px rgb(235, 235, 235);
+    border-radius: 10px 10px 10px 10px;
+    font-size: 20px;
+    line-height: 20px;
+    width: 280px;
+    
+    
+}
+
+.p4
+{
+    font-size: 35px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 35px;
+    font-style: normal;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.pd1
+{
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 50px;
+    color:#0b282b;
+    
+}
+
+.pd2
+{
+    font-weight:600;
+    font-size: 14px;
+    line-height: 25px;
+    color: #0b282b;
+    
+}
+.pd3
+{
+    font-weight:600;
+    font-size: 14px;
+    line-height: 15px;
+    color: #0b282b;
+    margin-left: 32px;
+       
+    
+}
+.nj
+{
+    margin-top: 18px;
+}
+
+.p5
+{
+    font-size: 15px;
+    color: #000000;
+    font-weight: 400;
+    line-height: 8px;
+}
+.gg
+{
+    
+  margin-top: 35px;
+ 
+
+}
+.editrow1
+{
+    margin-right: 40px;
+}
+.roww
+{
+    border:  2px solid BLACK;
+    padding: 30px;
+    box-shadow: 5px 10px 8px #888888;
+    width: 250px;
+    
+}
+.stepsdiv
+{
+   margin-left: 300px;
+   margin-top: 70px;
+   
+   
+}
+
+
+.l34
+{
+    display: inline-block;
+    margin: 10px;
+    width: 250px;
+    height: 450px;
+    
+    
+}
+
+#thirdsec
+{
+    height: 100%;
+    width: 100%;
+    
+}

@@ -1,0 +1,53 @@
+body{
+  background: url("../images/backgrounds/header_bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.dropdowns{
+  position: fixed;
+  width: 15%;
+  margin-top: 8px;
+}
+select{
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-family: sans-serif;
+  overflow:hidden;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background-color:	rgba(38, 166, 154, 0.2);
+}
+
+div.prog {
+  background:	#26A69A;
+  color: #fff;
+}
+div.prog p{
+  padding-left: 00px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  box-shadow: 0 5px 5px rgba(3, 0, 0, 0.5);
+  font-family: sans-serif;
+  overflow:hidden;
+  outline: none;
+  cursor: pointer;
+}
+.title{
+  font-family: 'Open Sans', sans-serif;
+}
+.circle{
+  max-width: 100px;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 990px) {
+  .dropdowns{
+    position: relative;
+    width: 100%;
+    margin-top: 8px;
+  }
+}

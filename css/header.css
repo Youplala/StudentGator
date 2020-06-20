@@ -1,0 +1,46 @@
+header{
+  font-family: 'Baloo Paaji 2', cursive;
+}
+.header_pp{
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-left: 10px;
+  border-radius: 60px;
+}
+
+.header_profile_container{
+  height: 60px;
+  display: flex;
+  text-align: right;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.3s;
+}
+.header_profile_container:hover{
+  cursor: pointer;
+  text-decoration: none;
+}
+.background{
+  height: 300px;
+}
+.logout_btn{
+  margin-top: -25px;
+  background-color: transparent;
+  margin-right: -15px;
+}
+.logout_btn:hover{
+  background-color: transparent;
+}
+header #sg_logo{
+  width: 170px;
+  transition: filter 0.5s;
+}
+header #sg_logo:hover{
+  filter: drop-shadow(0px 0px 30px grey);
+}
+.nav_container{
+  background-color: transparent;
+  box-shadow: 0 0 0 0;
+  margin-top: 10px;
+}

@@ -1,0 +1,101 @@
+      @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+      body{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: url("../images/backgrounds/header_bg.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .login-box{
+        color:#26A69A;
+      }
+      .login-box h1{
+        font-size: 40px;
+        margin-bottom:10px;
+        padding: 13px 0;
+        border-bottom: 6px solid #26A69A;
+      }
+      .textbox{
+        width: 100%;
+        overflow: hidden;
+        font-size:20px;
+        padding: 8px 0;
+        margin: 8px 0;
+
+      }
+      .textbox i{
+        width: 26px;
+        float: left;
+        text-align: center;
+      }
+      .textbox input{
+        border: none;
+        outline: none;
+        background: none;
+        color:#26A69A;
+        font-size:18px;
+        width: 100px;
+        float: left;
+        margin: 0 10px;
+      }
+
+      /* The container must be positioned relative: */
+      .custom-select {
+        position: relative;
+        font-family: Arial;
+      }
+
+      .custom-select select {
+        display: none; /*hide original SELECT element: */
+      }
+
+      .select-selected {
+        background-color: DodgerBlue;
+      }
+
+      /* Style the arrow inside the select element: */
+      .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+      }
+
+      /* Point the arrow upwards when the select box is open (active): */
+      .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #fff transparent;
+        top: 7px;
+      }
+
+      /* style the items (options), including the selected item: */
+      .select-items div,.select-selected {
+        color: #ffffff;
+        padding: 8px 16px;
+        border: 1px solid transparent;
+        border-color: transparent transparent #26A69A transparent;
+        cursor: pointer;
+      }
+
+      /* Style items (options): */
+      .select-items {
+        position: absolute;
+        background-color: DodgerBlue;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+      }
+
+      /* Hide the items when the select box is closed: */
+      .select-hide {
+        display: none;
+      }
+
+      .select-items div:hover, .same-as-selected {
+        background-color:#26A69A ;
+      }
