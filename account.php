@@ -66,7 +66,7 @@
                 <div class="col s12 m12 l12">
                   <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width transparent">
                     <?php
-                    $isSubagent = 0;
+                    $isSubagent = 1;
                     if ($isSubagent == 1){
                       ?>
                     <li class="tab col s6 m3 l3"><a href="#documents">Documents</a></li>

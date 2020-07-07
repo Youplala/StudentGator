@@ -1,13 +1,15 @@
 <?php session_start(); ?>
 <link rel="stylesheet" type="text/css" href="css/header.css">
+
 <?php include 'php/dbConfig.php'; ?>
 <nav class="nav_container">
-    <div class="nav-wrapper container black-text">
-      <a href="index.php" class="brand-logo"><img id="sg_logo" src="images/logos/logo.png" alt="StudentGator Logo"></a>
+    <div class="nav-wrapper black-text">
+      <a href="index.php" class="brand-logo"><img id="sg_logo" src="images/logos/logo4.png" alt="StudentGator Logo"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger" ><i class="material-icons black-text">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="index.php" class="black-text">Home</a></li>
-        <li><a href="SGallprogs.php" class="black-text">Programs</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="SGallprogs.php">Programs</a></li>
+        <li><a href="blog.php">Blog</a></li>
         <?php
         if( isset($_SESSION['username']) && !empty($_SESSION['username']) )
         {
@@ -25,7 +27,7 @@
           <li>
             <div class="header_profile_container">
               <div class="header_profile_info">
-                <h6 style="margin-top: 50px;">
+                <h6>
                   <?php
                 $name = $con->query("SELECT Name FROM user WHERE username LIKE '%$username%'");
                 while($row = mysqli_fetch_array($name)) {
@@ -63,6 +65,7 @@
     <?php } ?>
     <li><a href="index.php" class="black-text">Home</a></li>
     <li><a href="SGallprogs.php" class="black-text">Programs</a></li>
+    <li><a href="blog.php" class="black-text">Blog</a></li>
 
 
   </ul>
