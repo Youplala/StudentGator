@@ -93,7 +93,7 @@ window.onload = function() {
       <?php include 'components/header.php';?>
       <div id="main" class="main">
 
-        <div id="icons_container" class="scrolling_icons_container section">
+        <div id="icons_container" class="scrolling_icons_container section container">
           <div class="money_icon row valign-wrapper">
             <div class="col s6 m6 l6 right-align" data-aos="fade-right" data-aos-duration="1500">
               <p style="font-size:3vw;">Absolutely no charge for students. </p>

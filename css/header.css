@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 header{
-  font-family: 'Baloo Paaji 2', cursive;
+
 }
 .nav_container{
   background-color: #fff;
@@ -11,39 +12,66 @@ header{
 .header_pp{
   width: 50px;
   height: 50px;
-  object-fit: cover;
+  margin-top: 5px;
   margin-left: 10px;
-  margin-bottom: 20px;
+  object-fit: cover;
   border-radius: 60px;
+  transition: all 0.2s ease;
 }
-
+.header_pp:hover{
+  filter: brightness(50%);
+}
 .header_profile_container{
+  margin-top: 5px;
   display: flex;
   text-align: right;
-  align-items: center;
   transition: filter 0.3s;
-  padding: 10px;
 }
+.user_name_li{
+  padding: 5px;
+}
+
 .header_profile_container:hover{
   cursor: pointer;
   text-decoration: none;
 }
 nav ul li a{
-  font-size: 18px;
+  font-size: 16px;
+  margin-top: 3px;
   transition: color 0.25s;
   color: #111;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 550;
+
 }
 nav ul li a:hover{
   background-color: transparent;
-  color: lightgrey;
+  color: #0F4A52;
 }
 .nav-wrapper{
   margin-left: 20px;
   margin-right: 20px;
 }
+#dropdown1{
+  width: 350px;
+}
+#dropdown1 .user_name{
+  text-align: center;
+  color: #111;!important
+}
+#dropdown1 a{
+  color: #0F4A52;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+#dropdown1 li a img{
+  margin-right: 15px;
+}
 
 .logout_btn{
-  margin-top: -25px;
+  margin-top: -28px;
   background-color: transparent;
   margin-right: -15px;
   font-size: 13px;
@@ -52,6 +80,6 @@ nav ul li a:hover{
   background-color: transparent;
 }
 nav #sg_logo{
-  height: 55px;
-  margin-top: 7px;
+  height: 45px;
+  margin-top: 12px;
 }

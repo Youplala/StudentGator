@@ -48,7 +48,8 @@ body .buttons{
 }
 .scrolling_icons_container{
   margin-top: 100px;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
   font-size: 40px;
 }
 .travel_icon{
@@ -99,26 +100,59 @@ body .buttons{
   box-shadow: 5px 10px 8px #888888;
   margin: 10px;
 }
-.pd1
-{
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 50px;
-    color:#0b282b;
-
-}
-.pd2
-{
-    font-weight:600;
-    font-size: 14px;
-    line-height: 25px;
-    color: #0b282b;
-    text-align: center;
-}
 .buttons a {
   text-decoration: none;
   color: inherit;
 }
+
+/*
+.cta{
+  position: relative;
+  margin: auto;
+  margin-top: 30px;
+  padding: 35px 30px;
+  border-radius:100px;
+  background: rgba(15, 74, 82, 1);
+  transition: all 0.3s ease;
+  color: black;
+}
+.cta:hover{
+  transform: scale(1.05);
+  background: rgba(15, 74, 82, 0.7);
+}
+.cta:hover span{
+  color: #fff;
+}
+.cta span {
+  color: #fff;
+  stroke: #fff;
+  font-size: 4.5vh;
+  line-height: 35px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.cta svg {
+  position: relative;
+  top: 5px;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #fff;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+  stroke: #fff;
+}
+*/
 .cta {
   position: relative;
   margin: auto;
@@ -180,7 +214,7 @@ body .buttons{
 }
 .btn-floating{
   position: absolute;
-  top:90%;
+  bottom: 2%;
   left: 49%;
   transition: all 0.2s ease;
 }

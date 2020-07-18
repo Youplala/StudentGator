@@ -28,130 +28,135 @@
     ?>
   </header>
   <body>
-    <div class="main container">
+    <div class="main">
       <div class="row">
-        <div class="col s12 m12 l7">
-            <div class="row card">
-              <div class="info_container">
-                <img class="profile_picture modal-trigger tooltipped" data-position="left" data-tooltip="Change your profile picture" href="#modal1" src=<?php echo $pp_url["profile_picture_url"]; ?> alt="Photo de profil" title="Change your profile picture" >
-                <div class="infos">
-                  <h5><?php echo $first_surname; ?></h5>
-                  <p><?php echo $biography; ?></p>
-                </div>
-              </div>
-              <div id="modal1" class="modal">
-                <div class="modal-content">
-                  <h4>Upload profile picture</h4>
-                  <p>Take a nice picture to show your professionalism. Formats accepted: jpg, png, jpeg</p>
+        <div class="col s2">
 
-                  <form action="account.php" method="post" enctype="multipart/form-data">
-                    <div class="file-field input-field">
-                      <div class="btn">
-                        <span>Choose</span>
-                        <input type="file" name="upload_pp" id="upload_pp">
-                      </div>
-                      <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" placeholder="Profile picture">
-                      </div>
-                    </div>
-                    <p>When done, reload the page to see your new picture</p>
-                    <div class="modal-footer">
-                      <input type="submit" name="submit" value="Done" class="modal-close waves-effect waves-green btn-flat">
-                    </div>
-                  </form>
-                </div>
-                <?php include 'upload_pp.php'; ?>
-              </div>
-              <div class="row">
-                <div class="col s12 m12 l12">
-                  <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width transparent">
-                    <?php
-                    $isSubagent = 1;
-                    if ($isSubagent == 1){
-                      ?>
-                    <li class="tab col s6 m3 l3"><a href="#documents">Documents</a></li>
-                    <li class="tab col s3"><a href="#information_tab">Information</a></li>
-
-                  </ul>
-                  <?php include 'php/profile_page/documents_subagent.php' ?>
-                  <?php include 'php/profile_page/profile_info.php' ?>
-                  <?php }else{?>
-                    <li class="tab col s3"><a href="#applied_tab">Applied programs</a></li>
-                    <li class="tab col s6 m3 l3"><a href="#documents">Documents</a></li>
-                    <li class="tab col s3"><a href="#information_tab">Information</a></li>
-                    <li class="tab col s3"><a href="#support_tab">Support</a></li>
-                  </ul>
-                  <?php include 'php/profile_page/applied_programs.php' ?>
-                  <?php include 'php/profile_page/documents_user.php' ?>
-                  <?php include 'php/profile_page/profile_info.php' ?>
-                  <div id="support_tab" class="col s12 ">
-                    <div class="s12 m12 l12">
-                      <h5>Chat in construction</h5>
-                    </div>
+        </div>
+        <div class="col s9">
+          <div class="col s12 m12 l7">
+              <div class="row card">
+                <div class="info_container">
+                  <img class="profile_picture modal-trigger tooltipped" data-position="left" data-tooltip="Change your profile picture" href="#modal1" src=<?php echo $pp_url["profile_picture_url"]; ?> alt="Photo de profil" title="Change your profile picture" >
+                  <div class="infos">
+                    <h5><?php echo $first_surname; ?></h5>
+                    <p><?php echo $biography; ?></p>
                   </div>
-                  <?php } ?>
-
                 </div>
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>Upload profile picture</h4>
+                    <p>Take a nice picture to show your professionalism. Formats accepted: jpg, png, jpeg</p>
+
+                    <form action="account.php" method="post" enctype="multipart/form-data">
+                      <div class="file-field input-field">
+                        <div class="btn">
+                          <span>Choose</span>
+                          <input type="file" name="upload_pp" id="upload_pp">
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text" placeholder="Profile picture">
+                        </div>
+                      </div>
+                      <p>When done, reload the page to see your new picture</p>
+                      <div class="modal-footer">
+                        <input type="submit" name="submit" value="Done" class="modal-close waves-effect waves-green btn-flat">
+                      </div>
+                    </form>
+                  </div>
+                  <?php include 'upload_pp.php'; ?>
+                </div>
+                <div class="row">
+                  <div class="col s12 m12 l12">
+                    <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width transparent">
+                      <?php
+                      $isSubagent = 1;
+                      if ($isSubagent == 1){
+                        ?>
+                      <li class="tab col s6 m3 l3"><a href="#documents">Documents</a></li>
+                      <li class="tab col s3"><a href="#information_tab">Information</a></li>
+
+                    </ul>
+                    <?php include 'php/profile_page/documents_subagent.php' ?>
+                    <?php include 'php/profile_page/profile_info.php' ?>
+                    <?php }else{?>
+                      <li class="tab col s3"><a href="#applied_tab">Applied programs</a></li>
+                      <li class="tab col s6 m3 l3"><a href="#documents">Documents</a></li>
+                      <li class="tab col s3"><a href="#information_tab">Information</a></li>
+                      <li class="tab col s3"><a href="#support_tab">Support</a></li>
+                    </ul>
+                    <?php include 'php/profile_page/applied_programs.php' ?>
+                    <?php include 'php/profile_page/documents_user.php' ?>
+                    <?php include 'php/profile_page/profile_info.php' ?>
+                    <div id="support_tab" class="col s12 ">
+                      <div class="s12 m12 l12">
+                        <h5>Chat in construction</h5>
+                      </div>
+                    </div>
+                    <?php } ?>
+
+                  </div>
 
 
-            </div>
-        </div>
-
-      </div>
-
-      <div class="col s12 m12 l5">
-        <div class="card">
-          <?php
-            if($isSubagent == 1){
-           ?>
-
-           <h4>Students list</h4>
-           <div class="input-field">
-             <input id="student_search" type="text" class="validate">
-             <label for="student_search">Search for a student</label>
-           </div>
-           <div class="collection">
-              <a href="#!" class="collection-item">Elie Brosset</a>
-              <a href="#!" class="collection-item">Mohamed Hassanien</a>
-              <a href="#!" class="collection-item">Dorian Roux</a>
-              <a href="#!" class="collection-item">Maria-Paula Roulet</a>
-            </div>
-          <?php }else{ ?>
-
-          <h4>Tasklist</h4>
-          <div class="collection">
-            <a href="#!" class="collection-item">
-                <label>
-                  <input type="checkbox"/>
-                  <span class="title">Write the new motivation letter for Brandon </span>
-                  <p class="date_hour">Monday 27 | 17h30</p>
-                </label>
-            </a>
-            <a href="#!" class="collection-item">
-                <label>
-                  <input type="checkbox"/>
-                  <span class="title">Write the new motivation letter for Brandon</span>
-                  <p class="date_hour">Monday 27 | 17h30</p>
-                </label>
-            </a>
-            <a href="#!" class="collection-item">
-                <label>
-                  <input type="checkbox"/>
-                  <span class="title">Write the new motivation letter for Brandon</span>
-                  <p class="date_hour">Monday 27 | 17h30</p>
-                </label>
-            </a>
-            <a href="#!" class="collection-item">
-                <label>
-                  <input type="checkbox"/>
-                  <span class="title">Write the new motivation letter for Brandon</span>
-                  <p class="date_hour">Monday 27 | 17h30</p>
-                </label>
-            </a>
+              </div>
           </div>
-        <?php } ?>
+
         </div>
-      </div>
+
+        <div class="col s12 m12 l5">
+          <div class="card">
+            <?php
+              if($isSubagent == 1){
+             ?>
+
+             <h4>Students list</h4>
+             <div class="input-field">
+               <input id="student_search" type="text" class="validate">
+               <label for="student_search">Search for a student</label>
+             </div>
+             <div class="collection">
+                <a href="#!" class="collection-item">Elie Brosset</a>
+                <a href="#!" class="collection-item">Mohamed Hassanien</a>
+                <a href="#!" class="collection-item">Dorian Roux</a>
+                <a href="#!" class="collection-item">Maria-Paula Roulet</a>
+              </div>
+            <?php }else{ ?>
+
+            <h4>Tasklist</h4>
+            <div class="collection">
+              <a href="#!" class="collection-item">
+                  <label>
+                    <input type="checkbox"/>
+                    <span class="title">Write the new motivation letter for Brandon </span>
+                    <p class="date_hour">Monday 27 | 17h30</p>
+                  </label>
+              </a>
+              <a href="#!" class="collection-item">
+                  <label>
+                    <input type="checkbox"/>
+                    <span class="title">Write the new motivation letter for Brandon</span>
+                    <p class="date_hour">Monday 27 | 17h30</p>
+                  </label>
+              </a>
+              <a href="#!" class="collection-item">
+                  <label>
+                    <input type="checkbox"/>
+                    <span class="title">Write the new motivation letter for Brandon</span>
+                    <p class="date_hour">Monday 27 | 17h30</p>
+                  </label>
+              </a>
+              <a href="#!" class="collection-item">
+                  <label>
+                    <input type="checkbox"/>
+                    <span class="title">Write the new motivation letter for Brandon</span>
+                    <p class="date_hour">Monday 27 | 17h30</p>
+                  </label>
+              </a>
+            </div>
+          <?php } ?>
+          </div>
+        </div>
+        </div>
     </div>
   </div>
 </div>

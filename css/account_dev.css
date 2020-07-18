@@ -1,25 +1,38 @@
 body{
   background-color: #f8f9fd;
+  margin-top: 0;
 }
-body .main{
-  margin-top: 40px;
+body #main{
   font-family: 'Baloo Paaji 2', cursive;
 
 }
+header, #main, footer {
+  padding-left: 230px;
+  padding-right:310px;
+
+}
+@media only screen and (max-width : 992px) {
+  header, #main, footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.sidenavigation{
+  background-color: #fff;
+}
+.info_container{
+  display: flex;
+}
 body .profile_picture{
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   transition: filter 0.3s;
   cursor: pointer;
 }
-body .profile_picture:hover{
-  filter: brightness(50%);
-}
-.info_container{
-  display: flex;
-  flex-wrap: wrap;
+.collection a span,p{
+  color:#111;
 }
 .infos{
   margin-left: 20px;
@@ -63,19 +76,13 @@ label{
   color:#26a69a;
   /*Custom Color On Hover*/
 }
-
 .tabs .tab a:focus.active {
   color:#26a69a;
   /*Custom Text Color While Active*/
   background-color: rgba(38, 166, 154, 0.2);
   /*Custom Background Color While Active*/
 }
-
 .tabs .indicator {
   background-color:#26a69a;
   /*Custom Color Of Indicator*/
-}
-.card{
-  border-radius: 20px;
-  padding: 5px 20px 20px 20px;
 }

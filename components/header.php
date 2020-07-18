@@ -1,10 +1,14 @@
 <?php session_start(); ?>
 <link rel="stylesheet" type="text/css" href="css/header.css">
 
-<?php include 'php/dbConfig.php'; ?>
+<?php
+  include 'php/dbConfig.php';
+  include 'components/get_user_info.php'
+?>
+
 <nav class="nav_container">
     <div class="nav-wrapper black-text">
-      <a href="index.php" class="brand-logo"><img id="sg_logo" src="images/logos/logo4.png" alt="StudentGator Logo"></a>
+      <a href="index.php" class="brand-logo"><img id="sg_logo" src="images/logos/logo.svg" alt="StudentGator Logo"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger" ><i class="material-icons black-text">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.php">Home</a></li>
@@ -13,31 +17,19 @@
         <?php
         if( isset($_SESSION['username']) && !empty($_SESSION['username']) )
         {
-          $username = $_SESSION['username'];
-          mysqli_select_db($con, "useregistration");
-          $url = $con->query("SELECT profile_picture_url FROM user WHERE username LIKE '%$username%'");
-          $pp_url = mysqli_fetch_array($url);
-
-          if(mysqli_num_rows($url)>0){
-            $profile_picture = $pp_url["profile_picture_url"];
-          }else{
-            $profile_picture = "images/user/default.png";
-          }
           ?>
           <li>
             <div class="header_profile_container">
               <div class="header_profile_info">
-                <h6>
-                  <?php
-                $name = $con->query("SELECT Name FROM user WHERE username LIKE '%$username%'");
-                while($row = mysqli_fetch_array($name)) {
-                  $first_surname = $row["Name"];
-                }
-                echo $first_surname;
-                 ?></h6>
-                <a href="logout.php" class="logout_btn grey-text">Disconnect</a>
+                <img src="<?php echo $profile_picture; ?>" class="header_pp dropdown-trigger" data-target="dropdown1">
+                  <ul id='dropdown1' class='dropdown-content' data-constrainWidth="false">
+                    <li class="user_name_li transparent"><span class="user_name"><?php echo $first_surname; ?></span></li>
+                    <li class="divider"></li>
+                    <li><a href="account.php"><img src="images/icons/user.svg" alt="User icon" width="28px;">Your profile</a></li>
+                    <li><a href=""><img src="images/icons/help.svg" alt="Help icon" width="28px;">Help</a></li>
+                    <li><a href="logout.php"><img src="images/icons/cancel.svg" alt="Disconnect icon" width="28px;">Disconnect</a></li>
+                  </ul>
               </div>
-              <img src="<?php echo $profile_picture; ?>" class="header_pp" onclick="">
             </div>
           </li>
         <?php }else{ ?>
@@ -72,5 +64,10 @@
   <script type="text/javascript">
     $(document).ready(function(){
        $('.sidenav').sidenav();
+       $('.dropdown-trigger').dropdown({
+        constrainWidth: false,
+        coverTrigger: false,
+        closeOnClick: false, // Displays dropdown below the button
+       });
       });
   </script>

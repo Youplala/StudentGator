@@ -17,7 +17,7 @@
   <header>
     <?php
      include 'components/header.php';
-     include 'components/searchbar.php';?>
+     ?>
   </header>
   <body>
 
