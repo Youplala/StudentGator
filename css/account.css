@@ -1,7 +1,5 @@
 body{
-  background: url("../images/backgrounds/header_bg.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: #f8f9fd;
 }
 body .main{
   margin-top: 40px;

@@ -1,0 +1,51 @@
+body{
+  background: url("../images/backgrounds/blog_bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #F8F9FD;
+}
+body .main{
+  margin-top: 40px;
+  font-family: 'Baloo Paaji 2', cursive;
+}
+.blog_card{
+  width: 400px;
+  height: 480px;
+}
+.card:hover{
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.30);
+}
+.cards_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.article_card{
+  border-radius: 5px;
+  padding: 15px 15px 0px 15px;
+}
+.blog_card .catchphrase{
+  text-decoration: none;
+  color: grey;
+}
+#article_txt_area{
+  height: 500px;
+}
+.article_info{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-title{
+  font-family: 'Francois One', sans-serif;
+}
+.title{
+  font-family: 'Francois One', sans-serif;
+}
+.title h1{
+  font-family: 'Secular One', sans-serif;
+}
+.article_title_txt_field{
+  background-color: white;
+}

@@ -28,6 +28,9 @@
           <input class="file-path validate" type="text" placeholder="Subagent Attestation">
         </div>
       </div>
+      <div class="row">
+        <input type="submit" name="submit" value="Done" class="modal-close waves-effect waves-green btn-flat right">
+      </div>
     </form>
   </div>
 </div>

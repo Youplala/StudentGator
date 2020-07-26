@@ -1,46 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 header{
-  font-family: 'Baloo Paaji 2', cursive;
+
+}
+.nav_container{
+  background-color: #fff;
+  box-shadow: 0 0 0 0;
+  box-shadow: 0 4px 6px -6px black;
+  position: relative;
+  min-height: 70px;
 }
 .header_pp{
   width: 50px;
   height: 50px;
-  object-fit: cover;
+  margin-top: 5px;
   margin-left: 10px;
+  object-fit: cover;
   border-radius: 60px;
+  transition: all 0.2s ease;
 }
-
+.header_pp:hover{
+  filter: brightness(50%);
+}
 .header_profile_container{
-  height: 60px;
+  margin-top: 5px;
   display: flex;
   text-align: right;
-  align-items: center;
-  justify-content: center;
   transition: filter 0.3s;
 }
+.user_name_li{
+  padding: 5px;
+}
+
 .header_profile_container:hover{
   cursor: pointer;
   text-decoration: none;
 }
-.background{
-  height: 300px;
+nav ul li a{
+  font-size: 16px;
+  margin-top: 3px;
+  transition: color 0.25s;
+  color: #111;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 550;
+
 }
+nav ul li a:hover{
+  background-color: transparent;
+  color: #0F4A52;
+}
+.nav-wrapper{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#dropdown1{
+  width: 350px;
+}
+#dropdown1 .user_name{
+  text-align: center;
+  color: #111;!important
+}
+#dropdown1 a{
+  color: #0F4A52;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+#dropdown1 li a img{
+  margin-right: 15px;
+}
+
 .logout_btn{
-  margin-top: -25px;
+  margin-top: -28px;
   background-color: transparent;
   margin-right: -15px;
+  font-size: 13px;
 }
 .logout_btn:hover{
   background-color: transparent;
 }
-header #sg_logo{
-  width: 170px;
-  transition: filter 0.5s;
-}
-header #sg_logo:hover{
-  filter: drop-shadow(0px 0px 30px grey);
-}
-.nav_container{
-  background-color: transparent;
-  box-shadow: 0 0 0 0;
-  margin-top: 10px;
+nav #sg_logo{
+  height: 45px;
+  margin-top: 12px;
 }

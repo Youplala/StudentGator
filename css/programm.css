@@ -1,0 +1,524 @@
+/* Sub-Header of the page
+  Return NavBar
+  School Picture + Link
+  School Name
+*/
+
+
+.header{
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+  color:black;
+}
+
+nav.clean{
+  padding: 0px 200px  100px;
+  box-shadow: none;
+  background: none;
+}
+
+.breadcrumb::before{
+  color:#004d40;
+}
+
+.last_breadcrumb{
+font-weight: bold;
+}
+
+.header .card{
+  display: inline-block;
+}
+.header .card {
+   transition: all .2s ease-in-out;
+}
+.header .card:hover {
+   transform: scale(1.05);
+}
+
+.program_logo{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 25px;
+}
+
+#school_nm{
+  color:#235b5d;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+/* NavBar fixed */
+.nav_content{
+  display: inline-block;
+}
+.nav_content span{
+  padding-top: 10px;
+  font-size: 40px;
+  display: block;
+}
+.nav_content nav{
+  border-radius: 20px;
+  text-align: center;
+  min-height: 105px;
+  background: none;
+}
+
+.nav_content a{
+  color: #235b5d;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-radius: 25px;
+  padding: 0px 25px 0px 25px;
+  transition: all .5s ease-in-out;
+}
+
+.nav_content a:hover{
+  text-decoration:none;
+  color: white;
+  background-color: #235b5d;
+  border-radius: 30px;
+  transform: scale(1.15);
+
+}
+
+
+
+
+/*   */
+
+.tabs .tab a {
+  color:#26a69a;
+
+
+  /*Custom Text Color*/
+}
+.tabs .tab a.active{
+  color:#26a69a;
+  /*Custom Color On Hover*/
+}
+
+.tabs .tab a:hover{
+  color: #26a69a;
+}
+.tabs .indicators{
+  background-color: blue;
+}
+
+
+
+
+
+
+
+#sidelris{
+  font-size: 18px;
+}
+
+div.camptab{
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+
+div.cp_container .inlbc{
+  display: inline-block;
+  margin-top: 100px;
+}
+
+div.sd_container{
+  margin-top: 25px;
+}
+
+h4.scl_title{
+  color: #235b5d;
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 15%;
+  text-align:center;
+}
+
+h4.re_title{
+    color: #235b5d;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 15%;
+    text-align:center;
+
+}
+
+h4.cp_title{
+    color: #235b5d;
+    font-size: 60px;
+    font-weight: bold;
+    text-align:center;
+
+}
+
+
+h4.pg_title{
+    color: #235b5d;
+    font-size: 60px;
+    margin-top: 20%;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-align:center;
+
+}
+
+h4.ls_title{
+  color: #235b5d;
+  font-size: 60px;
+  font-weight: bold;
+  text-align:center;
+}
+
+div.sd_container p{
+  padding: 15px;
+  text-align: justify;
+
+}
+
+div.sd_container blockquote{
+  padding: 5px;
+  font-family: fantasy;
+  font-size: 14px;
+}
+
+div.camptab h6{
+    margin-bottom: 20px;
+    font-weight:bold;
+    font-family:sans-serif;
+}
+
+div.inside_card{
+  margin-top: 50px;
+}
+
+div.sidelr h6{
+  font-weight: bold;
+}
+
+#popup_ranking{
+  border-radius: 25px;
+}
+
+#popup_ranking h5{
+  text-align: center;
+  color: #235b5d;
+  font-size: 30px;
+  font-weight: bold;
+  text-align:center;
+  margin-bottom: 50px;
+}
+
+#popup_ranking p{
+  text-align: center;
+}
+span.modal_span_tlt{
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  color: #235b5d;
+}
+
+span.modal_span_ranking{
+  font-size: 30px;
+}
+
+
+
+
+
+.form_title{
+  font-size: 15px;
+  text-align: left;
+  font-style: italic;
+  display: block;
+}
+
+.form_subtitle{
+  display: block;
+  font-size: 20px;
+  font-size: bold;
+  color: #235b5d;
+  margin-bottom: 20px;
+}
+
+..ss_description{
+
+}
+span.form_sstitle{
+  text-align: center;
+  display: block;
+  font-size: 11px;
+  padding: 2px;
+  border: 2px solid black;
+
+}
+
+p.form_sstitle{
+  text-align: center;
+  font-weight: bold;
+}
+
+p.applnw{
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+
+.Formation_card .card{
+   transition: all .2s ease-in-out;
+}
+.Formation_card .card:hover {
+   transform: scale(1.05);
+}
+
+
+
+
+
+div.cp_container p{
+  font-size: 18px;
+  padding: 15px;
+  text-align: justify;
+
+}
+
+div.cp_container div.card{
+  padding: 20px;
+  margin-bottom: 0px;
+}
+
+div.sidelr{
+  margin-top: 50px;
+  text-align: center;
+}
+div.sidelr p{
+  font-size: 16px;
+}
+div.sidelr img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+img.carous_img{
+  width: 500px;
+  height: 300px;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+div.sg_school_camp img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+li.pad5{
+  padding-bottom: 5px;
+}
+
+#popup_valid{
+  border-radius: 25px;
+}
+
+#popup_valid h5{
+  text-align: center;
+  color: #235b5d;
+  font-size: 35px;
+  font-weight: bold;
+  text-align:center;
+  margin-bottom: 50px;
+}
+
+#popup_valid p{
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: cursive;
+  margin-bottom: 50px;
+}
+
+div.divbord{
+  border: 3px solid black
+}
+
+span.modal_span_tlt2{
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  color: #235b5d;
+}
+.card{
+  border-radius: 25px;
+  padding: 10px 10px 10px 10px;
+}
+
+span.card-title{
+  text-align: center;
+  font-style: italic;
+  color: #235b5d;
+  font-family: cursive;
+}
+
+span.form_titl{
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  font-family: serif;
+  font-weight:bold;
+}
+
+span.title{
+  font-weight: bold;
+  font-style: italic;
+  border: 1px solid #235b5d;
+  padding: 2px;
+}
+
+p.descpt{
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  text-align: justify;
+  text-align: center;
+  font-style: normal;
+  font-family: sans-serif;
+}
+
+p.tt_title{
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+p.tt_dsc1{
+  padding-top:25px;
+}
+
+p.drt{
+  padding-top: 20px;
+}
+
+
+
+div.padcard{
+  margin-top: 300px;
+}
+button.button_stl{
+  border-radius: 20px;
+  margin-top: 32px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+div.pg_container div.card{
+  padding-top: 0px;
+}
+
+div.pg_container div.row div.card{
+  margin-top: 15px;
+  margin-bottom: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding: 20px 30px 10px 30px;
+}
+
+
+div.sd_container{
+  margin-top: 100px;
+}
+
+
+div.cp_container{
+  margin-top: 100px;
+}
+
+div.pg_container{
+  margin-top: 100px;
+}
+
+div.ls_container{
+  margin-top: 100px;
+}
+
+div.ls_container img{
+  border-radius: 25px;
+
+}
+
+div.left_side1{
+}
+div.left_side2{
+  margin-top: 500px;
+}
+h4.ls_subtitle{
+  color: #235b5d;
+  font-family: cursive;
+  font-size: 50px;
+  text-align:center;
+  margin-top: 50px;
+}
+
+h5.livingtitle{
+  margin-top: 50px;
+}
+
+
+div.ls_ov_img{
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+
+nav.sg_bar2_clr{
+  background-color: white;
+  border-radius: 25px;
+}
+
+div.sg_bar2_clr{
+  background-color: transparent;
+  height: 50px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+
+
+#googleMap{
+  border-radius: 25px;
+  height: 400px;
+  width: 100%;
+  display:inline-block;
+}
+
+.header_info{
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+}
+.header_info .text_info{
+  margin-left: 20px;
+  font-family: 'Baloo Paaji 2', cursive;
+}
+
+
+@media (max-width: 720px) {
+/* Styles for screen with max width of 600px */
