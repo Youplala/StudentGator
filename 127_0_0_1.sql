@@ -1,30 +1,16 @@
--- phpMyAdmin SQL Dump
--- version 5.0.2
--- https://www.phpmyadmin.net/
+
+CREATE DATABASE IF NOT EXISTS `test` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `test`;
 --
--- Hôte : 127.0.0.1
--- Généré le : mar. 23 juin 2020 à 14:09
--- Version du serveur :  10.4.11-MariaDB
--- Version de PHP : 7.2.31
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
+-- Database: `useregistration`
 --
--- Base de données : `useregistration`
---
+CREATE DATABASE IF NOT EXISTS `useregistration` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `useregistration`;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cities`
+-- Table structure for table `cities`
 --
 
 CREATE TABLE `cities` (
@@ -32,7 +18,7 @@ CREATE TABLE `cities` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `cities`
+-- Dumping data for table `cities`
 --
 
 INSERT INTO `cities` (`city`) VALUES
@@ -86,20 +72,26 @@ INSERT INTO `cities` (`city`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `images`
+-- Table structure for table `images`
 --
 
 CREATE TABLE `images` (
   `id` int(11) NOT NULL,
-  `file_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `uploaded_on` datetime NOT NULL,
-  `status` enum('1','0') COLLATE utf8_unicode_ci NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `image` varchar(200) NOT NULL,
+  `text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `image`, `text`) VALUES
+(1, '', '');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `levels`
+-- Table structure for table `levels`
 --
 
 CREATE TABLE `levels` (
@@ -107,7 +99,7 @@ CREATE TABLE `levels` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `levels`
+-- Dumping data for table `levels`
 --
 
 INSERT INTO `levels` (`level`) VALUES
@@ -119,7 +111,7 @@ INSERT INTO `levels` (`level`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `progs`
+-- Table structure for table `progs`
 --
 
 CREATE TABLE `progs` (
@@ -135,7 +127,7 @@ CREATE TABLE `progs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Déchargement des données de la table `progs`
+-- Dumping data for table `progs`
 --
 
 INSERT INTO `progs` (`Name`, `Language`, `city`, `type`, `level`, `length`, `fee`, `intake`, `school`) VALUES
@@ -694,7 +686,7 @@ INSERT INTO `progs` (`Name`, `Language`, `city`, `type`, `level`, `length`, `fee
 -- --------------------------------------------------------
 
 --
--- Structure de la table `schools`
+-- Table structure for table `schools`
 --
 
 CREATE TABLE `schools` (
@@ -702,7 +694,7 @@ CREATE TABLE `schools` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `schools`
+-- Dumping data for table `schools`
 --
 
 INSERT INTO `schools` (`name`) VALUES
@@ -738,7 +730,7 @@ INSERT INTO `schools` (`name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `types`
+-- Table structure for table `types`
 --
 
 CREATE TABLE `types` (
@@ -746,7 +738,7 @@ CREATE TABLE `types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `types`
+-- Dumping data for table `types`
 --
 
 INSERT INTO `types` (`type`) VALUES
@@ -765,7 +757,7 @@ INSERT INTO `types` (`type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -777,52 +769,47 @@ CREATE TABLE `user` (
   `nationality` varchar(255) NOT NULL,
   `langtest` varchar(255) NOT NULL,
   `langtestresult` varchar(255) NOT NULL,
-  `countrywanted` varchar(255) NOT NULL,
-  `profile_picture_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `countrywanted` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Déchargement des données de la table `user`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`Name`, `bio`, `username`, `password`, `email`, `nationality`, `langtest`, `langtestresult`, `countrywanted`, `profile_picture_url`) VALUES
-('dsad', '', 'cc', 'cc', 'da', 'Azerbaijan', 'toefl', '', 'France', ''),
-('Dorian Roux', 'I Love football and food', 'dorian123', '12345', 'sdadas', 'Christmas Island', 'ielts', '', 'France', 'images/user/dorian123.jpg'),
-('Elie Brosset', 'I love new technologies, high-tech and sports. Data Science is my favourite field. ', 'eliebrosset', 'salut123', 'eliebrosset@gmail.com', 'France', 'toiec', '', 'France', 'images/user/eliebrosset.jpg'),
-('Omar Hammad', 'I love naos marketing', 'Hammobeka', '12344', 'saasdd', 'Austria', 'toiec', '', 'France', ''),
-('Julien Assuied', 'I love Constanza roja', 'JA123', 'A12345', 'jojomojo@gmail.com', 'Austria', 'toiec', '', 'France', ''),
-('ceda', 'dazdazdaz', 'mario', '123456', 'faefa@elie.fr', 'American Samoa', 'ielts', '', 'UK', ''),
-('Mohamed Hassanien', '', 'mhassanien', '1234', 'alymohamed@eisti.eu', 'Bahamas', 'ielts', '', 'France', ''),
-('MOHAMED ALY', 'I love hiking and horse riding', 'qw', '12', 'asadfasd', 'Bahamas', 'ielts', '', 'France', ''),
-('Kiko', 'I love girls', 'qwe', '12345', 'sda', 'Austria', 'toiec', '', 'France', ''),
-('souhila arib', 'hello la team', 'souhila', 'saluti', 'souhila@elie.fr', 'Austria', 'ielts', '', 'any', 'images/user/default.png'),
-('tim burton', 'i love sports', 'timburton', '123456', 'dzqdz@oui.fr', 'Algeria', 'toiec', '', 'France', 'images/user/default.png');
+INSERT INTO `user` (`Name`, `bio`, `username`, `password`, `email`, `nationality`, `langtest`, `langtestresult`, `countrywanted`) VALUES
+('dsad', '', 'cc', 'cc', 'da', 'Azerbaijan', 'toefl', '', 'France'),
+('Dorian Roux', 'I Love football and food', 'dorian123', '12345', 'sdadas', 'Christmas Island', 'ielts', '', 'France'),
+('Omar Hammad', 'I love naos marketing', 'Hammobeka', '12344', 'saasdd', 'Austria', 'toiec', '', 'France'),
+('Julien Assuied', 'I love Constanza roja', 'JA123', 'A12345', 'jojomojo@gmail.com', 'Austria', 'toiec', '', 'France'),
+('Mohamed Hassanien', '', 'mhassanien', '1234', 'alymohamed@eisti.eu', 'Bahamas', 'ielts', '', 'France'),
+('MOHAMED ALY', 'I love hiking and horse riding', 'qw', '12', 'asadfasd', 'Bahamas', 'ielts', '', 'France'),
+('Kiko', 'I love girls', 'qwe', '12345', 'sda', 'Austria', 'toiec', '', 'France');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `images`
+-- Indexes for table `images`
 --
 ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`username`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `images`
+-- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

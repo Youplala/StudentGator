@@ -1,142 +1,25 @@
 body{
   background-color: #f8f9fd;
-  margin-top: 0;
 }
-body #main{
+body .main{
+  margin-top: 40px;
   font-family: 'Baloo Paaji 2', cursive;
-  background-color: #EFEFEF;
-  padding-top: 10px;
-}
-
-.student_list_input{
-  margin-right: 5px;
-  margin-left: 5px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.createTaskContainer{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#slide-out li a{
-  display: flex;
-  align-items: center;
-  color: lightgrey;
-}
-#slide-out li a:hover{
-  color: #fff;
-}
-#slide-out li a:hover img{
-  filter: invert(100%) sepia(2%) saturate(314%) hue-rotate(333deg) brightness(113%) contrast(100%);
-}
-#slide-out li a img{
-  margin-right: 15px;
-  filter: invert(100%) sepia(99%) saturate(342%) hue-rotate(195deg) brightness(112%) contrast(87%);
-}
-.active_sidenav{
-  color: #ffffff;
-}
-.nav_container{
-  background-color: #fff;
-  box-shadow: 0 0 0 0;
-  box-shadow: 0 4px 6px -6px black;
-  position: relative;
-  min-height: 70px;
-}
-#sg_logo{
-}
-.addTaskBtn{
-  -webkit-transition: -webkit-transform .4s ease-in-out;
-  transition: transform .4s ease-in-out;
-}
-.addTaskBtn:hover{
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-.sidenav{
-  background-color: #0F4A52;
-}
-.sidenav .collection{
-  background-color: #0F4A52;
-  border: none;
-  padding: 0;
-  margin-top: 0px;
-  border-radius: 0px;
-
-}
-.sidenav .collection .collection-item{
-  background-color: #0F4A52;
-  border: none;
-  min-height: 55px;
-  border-radius: 0px;
-}
-.sidenav .collection .collection-item .title{
-  color: #fff;
-  transition: all 0.3s ease;
-}
-.sidenav .collection  a:hover .title{
-  color: #0F4A52;
-}
-.sidenav .collection  a:hover{
-  border-radius: 0px;
-}
-
-#slide-out a{
-  color: #fff;
-}
-#loading {
-  display: block;
-  position: fixed;
-  top: 70px;
-  left: 210px;
-  right: 300px;
-  height: 100%;
-  z-index: 9999;
-  background: #fafafa url("../images/backgrounds/loader.gif") no-repeat center center;
-  text-align: center;
-  color: #999;
-}
-#main, nav, footer {
-  padding-left: 220px;
-}
-@media only screen and (max-width : 992px) {
-  nav, #main, footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .nav-wrapper{
-    justify-content: space-between;
-  }
-}
-.info_container{
-  display: flex;
-}
-.user-view{
-  display: flex;
-  flex-direction: column;
-  align-items:center;
 
 }
 body .profile_picture{
-  width: 120px;
-  height: 120px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   transition: filter 0.3s;
   cursor: pointer;
-
 }
-.card{
-  padding: 10px;
-  border-radius: 4px;
+body .profile_picture:hover{
+  filter: brightness(50%);
 }
-.collection a{
-  background-color: #2C364C;
-}
-.collection a span,p{
-  color:#111;
+.info_container{
+  display: flex;
+  flex-wrap: wrap;
 }
 .infos{
   margin-left: 20px;
@@ -177,47 +60,22 @@ label{
   color: grey;
 }
 .tabs .tab a:hover {
-  color:#0F4A52;
+  color:#26a69a;
   /*Custom Color On Hover*/
 }
+
 .tabs .tab a:focus.active {
-  color:#0F4A52;
+  color:#26a69a;
   /*Custom Text Color While Active*/
-  background-color: transparent;
+  background-color: rgba(38, 166, 154, 0.2);
   /*Custom Background Color While Active*/
 }
-.tabs .tab a.active {
-  color:#0F4A52;
-}
+
 .tabs .indicator {
-  background-color:#0F4A52;
+  background-color:#26a69a;
   /*Custom Color Of Indicator*/
 }
-
-
- /* label color */
-   .input-field label {
-   }
-   /* label focus color */
-   .input-field input[type=text]:focus + label {
-     color: #000;
-   }
-   /* label underline focus color */
-   .input-field input[type=text]:focus {
-     border-bottom: 1px solid #0F4A52;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* valid color */
-   .input-field input[type=text].valid {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* invalid color */
-   .input-field input[type=text].invalid {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   /* icon prefix focus color */
-   .input-field .prefix.active {
-     color: #000;
-   }
+.card{
+  border-radius: 20px;
+  padding: 5px 20px 20px 20px;
+}
