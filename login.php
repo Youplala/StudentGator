@@ -25,8 +25,8 @@
       <div class="col s0 m3 l4">
       </div>
       <div class="col s12 m6 l4 ">
-        <div class="login-box">
-          <h1>Login</h1>
+        <div class="login-box card">
+          <h3 class="center-align">Login</h3>
           <div class="textbox">
         <form class="" action="" method="post">
           <input type="text" placeholder="Username" name="username" value="" required>

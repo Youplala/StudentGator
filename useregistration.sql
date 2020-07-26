@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 23 juin 2020 à 14:09
--- Version du serveur :  10.4.11-MariaDB
--- Version de PHP : 7.2.31
+-- Généré le : mer. 22 juil. 2020 à 23:50
+-- Version du serveur :  10.4.13-MariaDB
+-- Version de PHP : 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -738,6 +738,63 @@ INSERT INTO `schools` (`name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `task`
+--
+
+CREATE TABLE `task` (
+  `ID` int(255) NOT NULL,
+  `content` varchar(500) NOT NULL,
+  `checked` tinyint(1) NOT NULL,
+  `due_date` varchar(2999) NOT NULL,
+  `date` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `task`
+--
+
+INSERT INTO `task` (`ID`, `content`, `checked`, `due_date`, `date`) VALUES
+(16, 'ftyftufgfu yif-t ', 0, 'Jul 29, 2020', 'Jul/20/2020'),
+(17, 'salut la team', 0, 'Jul 21, 2020', 'Jul/20/2020'),
+(18, 'upload cv', 0, 'Jul 23, 2020', 'Jul/22/2020'),
+(19, 'dz', 0, '', 'Jul/22/2020'),
+(20, 'fezfz', 0, '', 'Jul/22/2020'),
+(21, 'fzfeéfeé', 0, 'Jul 23, 2020', 'Jul/22/2020'),
+(22, 'vdvzvz', 0, '', 'Jul/22/2020'),
+(23, 'yes ok then', 0, 'Jul 31, 2020', 'Jul/22/2020'),
+(24, 'mohamed is beautiful', 0, 'Aug 12, 2020', 'Jul/22/2020'),
+(25, 'salut les amis', 0, 'Jul 30, 2020', 'Jul/22/2020');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tasklink`
+--
+
+CREATE TABLE `tasklink` (
+  `user` varchar(255) NOT NULL,
+  `ID_TL` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `tasklink`
+--
+
+INSERT INTO `tasklink` (`user`, `ID_TL`) VALUES
+('dorian123', 16),
+('dorian123', 17),
+('dorian123', 18),
+('dorian123', 19),
+('dorian123', 20),
+('souhila', 21),
+('timburton', 22),
+('dorian123', 23),
+('dorian123', 24),
+('<br /><b>Notice</b>:  Undefined variable: curr_student_username in <b>C:xampphtdocsstudentgatoraccount_student.php</b> on line <b>81</b><br />', 25);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `types`
 --
 
@@ -778,25 +835,175 @@ CREATE TABLE `user` (
   `langtest` varchar(255) NOT NULL,
   `langtestresult` varchar(255) NOT NULL,
   `countrywanted` varchar(255) NOT NULL,
-  `profile_picture_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `profile_picture_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `subagent` varchar(2999) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`Name`, `bio`, `username`, `password`, `email`, `nationality`, `langtest`, `langtestresult`, `countrywanted`, `profile_picture_url`) VALUES
-('dsad', '', 'cc', 'cc', 'da', 'Azerbaijan', 'toefl', '', 'France', ''),
-('Dorian Roux', 'I Love football and food', 'dorian123', '12345', 'sdadas', 'Christmas Island', 'ielts', '', 'France', 'images/user/dorian123.jpg'),
-('Elie Brosset', 'I love new technologies, high-tech and sports. Data Science is my favourite field. ', 'eliebrosset', 'salut123', 'eliebrosset@gmail.com', 'France', 'toiec', '', 'France', 'images/user/eliebrosset.jpg'),
-('Omar Hammad', 'I love naos marketing', 'Hammobeka', '12344', 'saasdd', 'Austria', 'toiec', '', 'France', ''),
-('Julien Assuied', 'I love Constanza roja', 'JA123', 'A12345', 'jojomojo@gmail.com', 'Austria', 'toiec', '', 'France', ''),
-('ceda', 'dazdazdaz', 'mario', '123456', 'faefa@elie.fr', 'American Samoa', 'ielts', '', 'UK', ''),
-('Mohamed Hassanien', '', 'mhassanien', '1234', 'alymohamed@eisti.eu', 'Bahamas', 'ielts', '', 'France', ''),
-('MOHAMED ALY', 'I love hiking and horse riding', 'qw', '12', 'asadfasd', 'Bahamas', 'ielts', '', 'France', ''),
-('Kiko', 'I love girls', 'qwe', '12345', 'sda', 'Austria', 'toiec', '', 'France', ''),
-('souhila arib', 'hello la team', 'souhila', 'saluti', 'souhila@elie.fr', 'Austria', 'ielts', '', 'any', 'images/user/default.png'),
-('tim burton', 'i love sports', 'timburton', '123456', 'dzqdz@oui.fr', 'Algeria', 'toiec', '', 'France', 'images/user/default.png');
+INSERT INTO `user` (`Name`, `bio`, `username`, `password`, `email`, `nationality`, `langtest`, `langtestresult`, `countrywanted`, `profile_picture_url`, `subagent`) VALUES
+('dsad', '', 'cc', 'cc', 'da', 'Azerbaijan', 'toefl', '', 'France', '', NULL),
+('Dorian Roux', 'I Love football and food', 'dorian123', '12345', 'sdadas', 'Christmas Island', 'ielts', '', 'France', 'images/user/dorian123.jpg', 'eliebrosset'),
+('Elie Brosset', 'I love new technologies, high-tech and sports. Data Science is my favourite field. ', 'eliebrosset', 'salut123', 'eliebrosset@gmail.com', 'France', 'toiec', '', 'France', 'images/user/eliebrosset.jpg', NULL),
+('Julien Assuied', 'I love Constanza roja', 'JA123', 'A12345', 'jojomojo@gmail.com', 'Austria', 'toiec', '', 'France', '', NULL),
+('ceda', 'dazdazdaz', 'mario', '123456', 'faefa@elie.fr', 'American Samoa', 'ielts', '', 'UK', '', NULL),
+('Mohamed Hassanien', '', 'mhassanien', '1234', 'alymohamed@eisti.eu', 'Bahamas', 'ielts', '', 'France', '', NULL),
+('Kiko', 'I love girls', 'qwe', '12345', 'sda', 'Austria', 'toiec', '', 'France', '', NULL),
+('souhila arib', 'hello la team', 'souhila', 'saluti', 'souhila@elie.fr', 'Austria', 'ielts', '', 'any', 'images/user/default.png', 'eliebrosset'),
+('Omar Hammad', 'I love naos marketing', 'S_Admin', 'admin', 'saasdd', 'Austria', 'toiec', '', 'France', '', NULL),
+('tim burton', 'i love sports', 'timburton', '123456', 'dzqdz@oui.fr', 'Algeria', 'toiec', '', 'France', 'images/user/default.png', 'eliebrosset');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users_chat`
+--
+
+CREATE TABLE `users_chat` (
+  `msg_id` int(11) NOT NULL,
+  `sender_username` varchar(100) NOT NULL,
+  `receiver_username` varchar(100) NOT NULL,
+  `msg_content` varchar(1000) NOT NULL,
+  `msg_status` text NOT NULL,
+  `msg_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `users_chat`
+--
+
+INSERT INTO `users_chat` (`msg_id`, `sender_username`, `receiver_username`, `msg_content`, `msg_status`, `msg_date`) VALUES
+(1, 'S_Admin', 'S_Admin', '', 'read', '2020-06-18 16:35:40'),
+(2, 'cc', 'S_Admin', '', 'read', '2020-06-18 16:38:23'),
+(3, 'cc', 'S_Admin', 'hola', 'read', '2020-06-18 16:39:49'),
+(4, 'cc', 'S_Admin', 'bb', 'read', '2020-06-18 16:41:25'),
+(5, 'cc', 'S_Admin', 'bb', 'read', '2020-06-18 16:42:15'),
+(6, 'cc', 'S_Admin', 'bb', 'read', '2020-06-18 16:58:22'),
+(7, 'cc', 'S_Admin', 'hola', 'read', '2020-06-18 17:02:17'),
+(8, 'S_Admin', 'S_Admin', 'hola', 'read', '2020-06-18 21:17:25'),
+(9, 'cc', 'S_Admin', 'hola', 'read', '2020-06-18 21:19:44'),
+(10, 'cc', 'S_Admin', 'i love you', 'read', '2020-06-18 21:20:24'),
+(11, 'cc', 'S_Admin', '', 'read', '2020-06-18 22:02:55'),
+(12, 'cc', 'S_Admin', 'test', 'read', '2020-06-18 22:03:52'),
+(14, 'cc', 'S_Admin', 'hi', 'read', '2020-06-18 22:58:46'),
+(15, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-18 23:28:06'),
+(16, 'S_Admin', 'S_Admin', 'hi', 'read', '2020-06-18 23:29:51'),
+(17, 'S_Admin', 'cc', 'hellooooo', 'read', '2020-06-18 23:33:14'),
+(18, 'cc', 'S_Admin', 'asap', 'read', '2020-06-18 23:34:49'),
+(19, 'cc', 'S_Admin', 'how are you', 'read', '2020-06-19 15:17:13'),
+(20, 'qw', 'S_Admin', 'my name', 'read', '2020-06-19 15:38:43'),
+(21, 'qw', 'S_Admin', 'my name', 'read', '2020-06-19 15:39:55'),
+(22, 'S_Admin', 'qw', 'zdiceoc,ecnre', 'read', '2020-06-19 15:41:24'),
+(23, 'qw', 'S_Admin', 'my name', 'read', '2020-06-19 15:41:41'),
+(24, 'S_Admin', 'S_Admin', 'my name', 'read', '2020-06-19 15:47:20'),
+(25, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:14:20'),
+(26, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:16:25'),
+(27, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:18:14'),
+(28, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:19:36'),
+(29, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:21:01'),
+(30, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:21:58'),
+(31, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:24:39'),
+(32, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:25:17'),
+(33, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:28:54'),
+(34, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:30:57'),
+(35, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:33:16'),
+(36, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:34:11'),
+(37, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:35:20'),
+(38, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:37:10'),
+(39, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:38:08'),
+(40, 'S_Admin', 'S_Admin', 'hello', 'read', '2020-06-26 14:41:01'),
+(41, 'S_Admin', 'cc', ' ', 'read', '2020-06-27 19:01:40'),
+(43, 'cc', 'S_Admin', ' ', 'read', '2020-06-27 19:05:55'),
+(44, 'cc', 'S_Admin', ' ', 'read', '2020-06-27 19:08:48'),
+(45, 'cc', 'S_Admin', 'coucou', 'read', '2020-06-27 19:15:17'),
+(46, 'cc', 'S_Admin', 'coucou', 'read', '2020-06-27 19:16:06'),
+(48, 'dorian123', 'S_Admin', 'bro', 'read', '2020-06-27 19:30:49'),
+(49, 'S_Admin', 'dorian123', 'what can i help u for', 'read', '2020-06-27 19:36:52'),
+(50, 'dorian123', 'S_Admin', 'kar', 'read', '2020-06-27 19:47:24'),
+(51, 'dorian123', 'S_Admin', 'te amo mama', 'read', '2020-06-28 01:47:23'),
+(53, 'dorian123', 'S_Admin', 'ddjjd ciue,dco,ei ijnozojdoeozroooo zoooooooooooooo ooooooooo ooooooooooooooo ooooooooooooo', 'read', '2020-06-28 03:19:13'),
+(54, 'dorian123', 'S_Admin', 'hello', 'read', '2020-06-28 22:06:50'),
+(55, 'S_Admin', 'dorian123', 'bitch', 'read', '2020-06-28 23:24:36'),
+(56, 'S_Admin', 'dorian123', 'everythiing is ugly ', 'read', '2020-06-30 20:36:24'),
+(57, 'cc', 'S_Admin', 'lol', 'read', '2020-07-01 03:52:45'),
+(58, 'cc', 'S_Admin', 'efrsde', 'read', '2020-07-03 15:39:35'),
+(59, 'S_Admin', 'dorian123', 'efrsde', 'read', '2020-07-03 15:40:16'),
+(60, 'cc', 'S_Admin', 'hello', 'read', '2020-07-09 20:06:34'),
+(61, 'cc', 'S_Admin', 'cdcd', 'read', '2020-07-09 20:19:59'),
+(62, 'cc', '', 'hello', 'read', '2020-07-09 20:22:30'),
+(63, 'cc', '', 'hello', 'read', '2020-07-09 20:45:49'),
+(64, 'cc', '', 'ola', 'read', '2020-07-09 20:46:33'),
+(65, 'cc', '', 'gg', 'read', '2020-07-09 20:47:05'),
+(66, 'cc', 'S_Admin', 'helloo', 'read', '2020-07-09 20:59:09'),
+(67, 'cc', 'S_Admin', 'meb', 'read', '2020-07-09 21:02:11'),
+(68, 'cc', 'S_Admin', 'hello', 'read', '2020-07-10 02:19:28'),
+(69, 'cc', 'S_Admin', 'hello', 'read', '2020-07-10 02:19:28'),
+(70, 'cc', 'S_Admin', 'ola', 'read', '2020-07-10 02:19:34'),
+(71, 'cc', 'S_Admin', 'beb', 'read', '2020-07-10 02:20:07'),
+(72, 'cc', 'S_Admin', 'br', 'read', '2020-07-10 02:22:36'),
+(73, 'S_Admin', '', 'br', 'read', '2020-07-10 02:23:37'),
+(74, 'S_Admin', 'mariaroulet', 'hello', 'read', '2020-07-10 02:23:52'),
+(75, 'S_Admin', 'mariaroulet', 'hello', 'read', '2020-07-10 02:23:59'),
+(76, 'S_Admin', 'mariaroulet', 'hello', 'read', '2020-07-10 02:25:52'),
+(77, 'S_Admin', 'dorian123', '123', 'read', '2020-07-10 02:26:26'),
+(78, 'S_Admin', 'dorian123', 'hello', 'read', '2020-07-10 02:46:50'),
+(79, 'dorian123', 'S_Admin', '14', 'read', '2020-07-10 02:49:26'),
+(80, 'dorian123', 'S_Admin', '15', 'read', '2020-07-10 02:50:47'),
+(81, 'dorian123', 'S_Admin', '16', 'read', '2020-07-10 02:53:59'),
+(82, 'S_Admin', 'dorian123', '17', 'read', '2020-07-10 03:06:34'),
+(83, 'S_Admin', 'dorian123', '18', 'read', '2020-07-10 03:06:59'),
+(84, 'S_Admin', 'cc', 'kk', 'read', '2020-07-10 03:08:08'),
+(85, 'S_Admin', 'dorian123', '20', 'read', '2020-07-10 03:13:59'),
+(86, 'dorian123', 'S_Admin', '18', 'read', '2020-07-10 03:17:16'),
+(87, 'S_Admin', 'mariaroulet', 'jo', 'read', '2020-07-10 12:05:36'),
+(88, 'dorian123', 'S_Admin', '5516', 'read', '2020-07-10 12:06:58'),
+(89, 'cc', 'S_Admin', '15272', 'read', '2020-07-10 12:09:19'),
+(90, 'cc', 'S_Admin', 'bro', 'read', '2020-07-10 12:45:31'),
+(91, 'cc', 'S_Admin', '123', 'read', '2020-07-10 12:46:40'),
+(92, 'cc', 'S_Admin', '15', 'read', '2020-07-10 12:50:46'),
+(93, 'cc', 'S_Admin', '12', 'read', '2020-07-10 12:51:41'),
+(94, 'cc', 'S_Admin', '18', 'read', '2020-07-10 12:51:45'),
+(95, 'cc', 'S_Admin', '20', 'read', '2020-07-10 12:51:48'),
+(96, 'cc', 'S_Admin', '23', 'read', '2020-07-10 12:59:19'),
+(97, 'cc', 'S_Admin', '24', 'read', '2020-07-10 12:59:22'),
+(98, 'cc', 'S_Admin', '25', 'read', '2020-07-10 12:59:25'),
+(99, 'cc', 'S_Admin', 'broooo', 'read', '2020-07-13 02:51:22'),
+(100, 'cc', 'S_Admin', '1542', 'read', '2020-07-13 02:51:31'),
+(101, 'dorian123', 'S_Admin', 'hiiii', 'read', '2020-07-13 02:52:14'),
+(102, 'dorian123', 'S_Admin', '1', 'read', '2020-07-13 02:52:22'),
+(103, 'dorian123', 'S_Admin', '2', 'read', '2020-07-13 02:52:26'),
+(104, 'cc', 'S_Admin', '2525', 'read', '2020-07-13 02:54:26'),
+(105, 'cc', 'S_Admin', '25254', 'read', '2020-07-13 02:54:32'),
+(106, 'cc', 'S_Admin', '22', 'read', '2020-07-13 03:04:56'),
+(107, 'cc', 'S_Admin', '54', 'read', '2020-07-13 03:05:03'),
+(108, 'dorian123', 'S_Admin', '0.25', 'read', '2020-07-13 03:05:33'),
+(109, 'dorian123', 'S_Admin', 'nnn', 'read', '2020-07-13 03:05:38'),
+(110, 'dorian123', 'S_Admin', 'uhuy', 'read', '2020-07-13 03:05:42'),
+(111, 'cc', 'S_Admin', '1551', 'read', '2020-07-13 03:07:38'),
+(112, 'dorian123', 'S_Admin', '79', 'read', '2020-07-13 03:07:57'),
+(113, 'dorian123', 'S_Admin', '7894*', 'read', '2020-07-13 03:08:03'),
+(114, 'dorian123', 'S_Admin', '33', 'read', '2020-07-13 03:09:07'),
+(115, 'cc', 'S_Admin', '22', 'read', '2020-07-13 03:09:40'),
+(116, 'dorian123', 'S_Admin', 'wxq', 'read', '2020-07-13 03:27:06'),
+(117, 'cc', 'S_Admin', '22', 'read', '2020-07-13 03:29:05'),
+(118, 'cc', 'S_Admin', '23', 'read', '2020-07-13 03:30:35'),
+(119, 'cc', 'S_Admin', '23', 'read', '2020-07-13 03:30:54'),
+(120, 'cc', 'S_Admin', '25', 'read', '2020-07-13 03:31:08'),
+(121, 'S_Admin', 'cc', '12', 'read', '2020-07-13 04:21:21'),
+(122, 'S_Admin', 'cc', '2', 'read', '2020-07-13 04:42:51'),
+(123, 'S_Admin', 'dorian123', '1', 'read', '2020-07-13 04:43:30'),
+(124, 'S_Admin', 'dorian123', '2', 'read', '2020-07-13 04:45:09'),
+(125, 'S_Admin', 'cc', '1', 'read', '2020-07-13 05:11:31'),
+(126, 'dorian123', 'S_Admin', 'qiubo', 'read', '2020-07-13 21:50:17'),
+(127, 'dorian123', 'S_Admin', 'bro', 'read', '2020-07-13 21:50:23'),
+(128, 'S_Admin', 'cc', 'bro', 'read', '2020-07-14 15:23:39'),
+(129, 'S_Admin', 'eecere', 'lol', 'read', '2020-07-14 15:23:53'),
+(130, 'S_Admin', 'dorian123', '123', 'read', '2020-07-17 15:08:28'),
+(131, 'cc', 'S_Admin', 'hello*', 'read', '2020-07-17 15:08:56'),
+(132, 'dorian123', 'S_Admin', 'send', 'read', '2020-07-17 15:09:22'),
+(133, 'eliebrosset', 'S_Admin', 'i need help pls', 'read', '2020-07-22 21:25:52');
 
 --
 -- Index pour les tables déchargées
@@ -809,10 +1016,22 @@ ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `task`
+--
+ALTER TABLE `task`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`username`);
+
+--
+-- Index pour la table `users_chat`
+--
+ALTER TABLE `users_chat`
+  ADD PRIMARY KEY (`msg_id`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -823,6 +1042,18 @@ ALTER TABLE `user`
 --
 ALTER TABLE `images`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `task`
+--
+ALTER TABLE `task`
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT pour la table `users_chat`
+--
+ALTER TABLE `users_chat`
+  MODIFY `msg_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

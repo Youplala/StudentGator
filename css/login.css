@@ -1,13 +1,15 @@
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 body{
   font-family: sans-serif;
-  background: url("../images/backgrounds/header_bg.svg");
+  background: url("../images/backgrounds/work4.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 .login-box{
 
   color:#26A69A;
+  padding: 0 20px 20px 20px;
+  border-radius: 10px;
 }
 .login-box h1{
   font-size: 40px;

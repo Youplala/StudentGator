@@ -8,7 +8,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <link rel="stylesheet" type="text/css" href="css/account_dev.css">
-
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <script src="js/materialize.min.js"></script>
@@ -34,14 +33,18 @@
 
   <body>
 
-<?php include 'components/sidenav.php' ?>
 
-<?php include 'components/studentListSide.php' ?>
+    <?php
+    include 'components/sidenav.php'
+    include 'components/studentList.php'
+    ?>
+
+
 
     <div id="modal1" class="modal">
       <div class="modal-content">
         <h4>Upload profile picture</h4>
-        <p>Take a picture so students can see who you are. Formats accepted: jpg, png, jpeg</p>
+        <p>Take a nice picture to show your professionalism. Formats accepted: jpg, png, jpeg</p>
         <form action="upload_pp.php" method="post" enctype="multipart/form-data">
         <div class="file-field input-field">
           <div class="btn">
@@ -59,7 +62,8 @@
       </div>
     </div>
 
-<?php include 'components/accountHeader.php' ?>
+
+    <?php include 'components/accountHeader.php' ?>
 
     <?php
     if(isset($_GET['user']) && !empty($_GET['user'])){
@@ -72,37 +76,18 @@
         $curr_student_pp = $curr_student["profile_picture_url"];
         $curr_student_bio = $curr_student["bio"];
       }
-      $curr_student_tasklist = $con->query("SELECT task.content, task.checked, task.due_date, task.date FROM user, tasklink, task WHERE user.username LIKE '%$curr_student_username%' AND user.username = tasklink.user AND task.ID = tasklink.ID_TL ORDER BY task.due_date ASC");
+      $curr_student_tasklist = $con->query("SELECT task.content, task.checked, task.due_date, task.date FROM user, tasklink, task WHERE user.username LIKE '%$curr_student_username%' AND user.username = tasklink.user AND task.ID = tasklink.ID_TL ORDER BY task.due_date ASC")
 
       ?>
 
       <div id="main">
         <div id="loading"></div>
         <div class="row">
-            <div class="col s12 m12 l8 userContainer">
+            <div class="col s12 m12 l8 ">
                 <div class="row card">
                   <div class="info_container">
-                    <img class="profile_picture modal-trigger tooltipped" data-position="right" data-tooltip="Change your student profile picture" href="#modal2" src=<?php echo $curr_student_pp; ?> alt="Photo de profil">
-                    <div id="modal2" class="modal">
-                      <div class="modal-content">
-                        <h4>Upload profile picture</h4>
-                        <p>Take a nice picture to show your professionalism. Formats accepted: jpg, png, jpeg</p>
-                        <form action="upload_pp.php?user=<?php echo $curr_student_username; ?>" method="post" enctype="multipart/form-data">
-                        <div class="file-field input-field">
-                          <div class="btn">
-                            <span>Choose</span>
-                            <input type="file" name="upload_pp" id="upload_pp" required>
-                          </div>
-                          <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text" placeholder="Profile picture">
-                          </div>
-                        </div>
-                        <div class="modal-footer">
-                          <input type="submit" name="submit" value="Done" class="modal-close waves-effect waves-green btn-flat">
-                        </div>
-                      </form>
-                      </div>
-                    </div>
+                    <img class="profile_picture modal-trigger" href="#modal1" src=<?php echo $curr_student_pp; ?> alt="Photo de profil">
+
                     <div class="infos">
                       <h5><?php echo $curr_student_name; ?></h5>
                       <p><?php echo $curr_student_bio; ?></p>
@@ -110,16 +95,20 @@
                   </div>
 
                   <div class="row">
-
                     <div class="col s12 m12 l12">
                       <ul id="tabs-swipe-demo" class="tabs tabs-fixed-width transparent">
                         <li class="tab col s3"><a href="#applied_tab">Programs</a></li>
                         <li class="tab col s6 m3 l3"><a href="#documents">Documents</a></li>
                         <li class="tab col s3"><a href="#information_tab">Information</a></li>
+                        <li class="tab col s3"><a href="#support_tab">Support</a></li>
                       </ul>
                       <?php include 'php/profile_page/applied_programs.php' ?>
                       <?php include 'php/profile_page/documents_user.php' ?>
                       <?php include 'php/profile_page/profile_info.php' ?>
+                      <div id="support_tab" class="col s12 ">
+                        <div class="s12 m12 l12">
+                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -181,35 +170,29 @@
 
 
       <script>
-      var right_sidenav = document.querySelectorAll('.sidenav-right');
-      var instances = M.Sidenav.init(right_sidenav, {edge:'right'});
-      document.addEventListener('DOMContentLoaded', function() {
-        var tabs = document.querySelector('.tabs');
-        var tabs_instance = M.Tabs.init(tabs, {});
-        var hasTouchscreen = 'ontouchstart' in window;
-        if (hasTouchscreen) {
-          var instance = M.Tabs.init(el, {swipeable:true});
-        }
-        var collapsible = document.querySelector('.collapsible.expandable');
-        var collapsible_instance = M.Collapsible.init(collapsible, {
-          accordion: false
+        var right_sidenav = document.querySelectorAll('.sidenav-right');
+        var instances = M.Sidenav.init(right_sidenav, {edge:'right'});
+        document.addEventListener('DOMContentLoaded', function() {
+          var tabs = document.querySelector('.tabs');
+          var tabs_instance = M.Tabs.init(tabs, {});
+          var hasTouchscreen = 'ontouchstart' in window;
+          if (hasTouchscreen) {
+            var instance = M.Tabs.init(el, {swipeable:true});
+          }
+          var collapsible = document.querySelector('.collapsible.expandable');
+          var collapsible_instance = M.Collapsible.init(collapsible, {
+            accordion: false
+          });
         });
-      });
-      $(document).ready(function(){
-        $('#loading').fadeOut(700);
-        $('.modal').modal();
-        $('.tabs').tabs();
-        $('.tooltipped').tooltip();
-        $('.sidenav').sidenav();
-        $('.datepicker').datepicker();
-        $('.sidenav-right').sidenav({edge:'right'});
-        $('.dropdown-trigger').dropdown({
-         constrainWidth: false,
-         coverTrigger: false,
-         closeOnClick: false,
-         alignment: 'right', // Displays dropdown below the button
+        $(document).ready(function(){
+          $('#loading').fadeOut(700);
+          $('.modal').modal();
+          $('.tabs').tabs();
+          $('.tooltipped').tooltip();
+          $('.sidenav').sidenav();
+          $('.datepicker').datepicker();
+          $('.sidenav-right').sidenav({edge:'right'});
         });
-      });
 
       </script>
       <script type="text/javascript" src="js/materialize.min.js"></script>

@@ -173,26 +173,20 @@ nav #sg_logo{
   position: fixed;
   top: 70px;
   left: 210px;
-  right: 300px;
+  right: 0px;
   height: 100%;
   z-index: 9999;
   background: #fafafa url("../images/backgrounds/loader.gif") no-repeat center center;
   text-align: center;
   color: #999;
 }
-#main, nav, footer {
-  padding-left: 220px;
-  padding-right: 300px;
-}
-.main-section{
-  padding-left: 210px;
-  padding-right: 300px;
 
+#main, nav, footer {
+  padding-left: 210px;
 }
 @media only screen and (max-width : 992px) {
   nav, #main, .main-section, footer {
     padding-left: 0;
-    padding-right: 0;
   }
   .nav-wrapper{
     justify-content: space-between;
@@ -288,10 +282,11 @@ label{
 
  /* label color */
    .input-field label {
+     color: #0F4A52;
    }
    /* label focus color */
    .input-field input[type=text]:focus + label {
-     color: #000;
+     color: #0F4A52;
    }
    /* label underline focus color */
    .input-field input[type=text]:focus {
